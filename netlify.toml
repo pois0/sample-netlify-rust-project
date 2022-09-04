@@ -1,0 +1,15 @@
+[build]
+publish = "public"
+command = "cargo build -r"
+
+[context.production.environment]
+NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
+
+[context.deploy-preview.environment]
+NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
+
+[context.branch-deploy.environment]
+NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
+
+[context.dev.environment]
+NETLIFY_EXPERIMENTAL_BUILD_RUST_SOURCE = "true"
